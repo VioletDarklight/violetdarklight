@@ -1,10 +1,39 @@
 /* Importando fuente desde Google */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/*Barra de navegacion*/
+body {
+  --sb-track-color: hsla(247, 95%, 60%, 0.5);
+  --sb-thumb-color: #00fffd;
+  --sb-size: 4px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
 .container {
-  max-width: 1536px;
+  max-width: 96em;
   margin: 0 auto;
-  padding: 0 200px;
+  padding: 0 12.5em;
 }
 
 /* Seteando fuente en clase para ser utilizada */
@@ -34,23 +63,23 @@
 }
 
 .text-14{
- font-size: 14px
+ font-size: 0.875em;
 }
 
 .text-16{
- font-size: 16px
+ font-size: 1em;
 }
 
 .text-20{
- font-size: 20px;
+ font-size: 1.25em;
 }
 
 .text-24{
- font-size: 24px;
+ font-size: 1.5em;
 }
 
 .text-32{
- font-size: 32px;
+ font-size: 2em;
 }
 
 
@@ -70,7 +99,7 @@
 
 .title {
     color: white;
-    font-size: 48px;
+    font-size: 3em;
     font-weight: lighter;
     text-align: center;
     display: block;
@@ -82,17 +111,17 @@
 }
 .title-container img {
     flex-shrink: 0;
-    width: 50px; /* Ajusta el tamaño según sea necesario */
+    width: 3.125em; /* Ajusta el tamaño según sea necesario */
     height: auto;
 }
 .title-container h2 {
-    margin-left: 10px; /* Ajusta el espacio entre la imagen y el texto */
+    margin-left: 0.625em; /* Ajusta el espacio entre la imagen y el texto */
 }
 
 .title2 {
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 36px;
+    font-size: 2.25em;
     font-weight: 600;
     font-style: italic;
     text-align: left;
@@ -102,8 +131,8 @@
 hr {
   flex-grow: 1; 
   border: none;
-  border-top: 1px solid cyan; 
-  margin-top: 20px;
+  border-top: 0.063em solid cyan; 
+  margin-top: 1.25em;
 }
 
 .text-center {
@@ -127,15 +156,15 @@ hr {
 }
 
 .letter-spacing {
-    letter-spacing: 4px;
+    letter-spacing: 0.25em;
 }
 
 .navbar {
   color: white;
   background-color: #003db61a;
-  padding: 20px 48px;
-  border-radius: 60px;
-  border-bottom: 4px solid #4E37FA;
+  padding: 1.25em 3em;
+  border-radius: 3.75em;
+  border-bottom: 0.25em solid #4E37FA;
   width: 100%;
 }
 
@@ -151,13 +180,13 @@ hr {
 }
 
 .pl-64 {
-  padding-left: 64px;
+  padding-left: 4em;
 }
 
 .navbar-item {
   text-decoration: none;
   color: white;
-  padding: 8px 16px;
+  padding: 0.5em 1em;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   font-size: 1em;
 }
@@ -171,7 +200,7 @@ hr {
 
 .navbar-item-center:hover {
   color: #7EE8FA;
-  text-shadow: 0 0 10px #7EE8FA, 0 0 20px #7EE8FA, 0 0 40px #7EE8FA, 0 0 80px #7EE8FA, 0 0 160px #7EE8FA;
+  text-shadow: 0 0 0.625em #7EE8FA, 0 0 1.25em #7EE8FA, 0 0 2.5em #7EE8FA, 0 0 5em #7EE8FA, 0 0 10em #7EE8FA;
   transform: scale(1.5);
 }
 
@@ -236,8 +265,8 @@ body::before {
 }
 
 .galaxia {
-  width: 132px;
-  height: 74px;
+  width: 8.25em;
+  height: 4.625em;
   transform: rotate(30deg);
   animation: scale-rotate-reverse 1s ease-in-out forwards;
   animation-play-state: paused;
@@ -265,27 +294,27 @@ body::before {
 
 .submenu-category {
   display: inline-block;
-  margin-top: 24px;
+  margin-top: 1.5em;
 }
 
 .submenu {
-  border-left: .5px solid #7EE8FA;
-  margin-left: 32px;
-  margin-top: 24px;
+  border-left: 0.031em solid #7EE8FA;
+  margin-left: 2em;
+  margin-top: 1.5em;
 }
 
 .submenu li {
-  margin: 8px 0;
+  margin: 0.5em 0;
 }
 
 .btn-viaje {
   background-color: #001847;
-  padding-left: 48px;
-  padding-right: 48px;
-  border-radius: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid transparent;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-radius: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 0.063em solid transparent;
   display: block;
   margin: auto;
   transition: box-shadow .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
@@ -298,7 +327,7 @@ body::before {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  gap: 28px;
+  gap: 1.75em;
 }
 
 /* Pseudo elemento para aplicar estilos al botón */
@@ -307,20 +336,20 @@ body::before {
 .btn-viaje:focus {
   background-color: #001e5b;
   border-bottom-color: #4E37FA; /* Cambia el color del borde inferior en el estado hover */
-  box-shadow: 0 4px 0 #4E37FA;
+  box-shadow: 0 0.25em 0 #4E37FA;
 }
 
 .icon-nave {
   animation: float 2s infinite ease-in-out;
   height: 1em;
-  margin-left: 8px;
+  margin-left: 0.5em;
 }
 
 .obteniendo-mensaje-container {
   margin: auto;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 200px;
+  margin-bottom: 12.5em;
 }
 
 .obteniendo-mensaje{
@@ -328,8 +357,8 @@ body::before {
  font-style: italic;
  text-align: center;
  color: white;
- font-size: 20px;
- padding-inline: 196px;
+ font-size: 1.25em;
+ padding-inline: 12.25em;
 }
 
 /* Animaciones */
@@ -366,7 +395,7 @@ body::before {
 .about-me-title-container {
   display: flex;
   align-items: flex-end; /* Alinea los elementos al final del contenedor */
-  margin-top: 48px;
+  margin-top: 3em;
 }
 
 .about-me-title-container h3 {
@@ -375,9 +404,9 @@ body::before {
 
 .about-me-title-container hr {
   flex-grow: 1; /* Permite que el <hr> ocupe el espacio restante */
-  margin-left: 16px; /* Ajusta el espacio entre el texto y el <hr> */
+  margin-left: 1em; /* Ajusta el espacio entre el texto y el <hr> */
   border: none; /* Elimina el borde predeterminado */
-  border-bottom: 1px solid cyan; /* Agrega un borde inferior */
+  border-bottom: 0.063em solid cyan; /* Agrega un borde inferior */
 }
 
 .about-me-container {
@@ -411,22 +440,22 @@ body::before {
 }
 
 .about-description {
-  border-left: 1px solid #7EE8FA;
-  padding-left: 24px;
+  border-left: 0.063em solid #7EE8FA;
+  padding-left: 1.5em;
 }
 
 .about-description p {
-  margin-left: 20px;
+  margin-left: 1.25em;
 }
 
 .about-description h3 {
-  margin-bottom: 24px;
+  margin-bottom: 1.5em;
 }
 
 .planeta-container {
   display: inline-block;
   position: relative;
-  margin: 200px 0;
+  margin: 12.5em 0;
 }
 
 .planeta-texto {
@@ -436,11 +465,11 @@ body::before {
 }
 
 .planeta-tierra {
-  margin-top: 36px;
+  margin-top: 2.25em;
 }
 
 .h-64 {
-  height: 400px;
+  height: 25em;
 }
 
 .rubros-container {
@@ -452,22 +481,22 @@ body::before {
 
 .icons-container{
   background: rgba(0, 14, 42, 0.5);
-  box-shadow: 0px 4px 4px #4E37FA;
-  backdrop-filter: blur(2px);
+  box-shadow: 0em 0.25em 0.25em #4E37FA;
+  backdrop-filter: blur(0.125em);
   /* Note: backdrop-filter has minimal browser support */
-  border-radius: 46px;
-  padding-top: 64px;
-  padding-bottom: 64px;
-  height: 300px;
+  border-radius: 2.875em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  height: 18.75em;
 }
 
 .icons-container li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 48px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  gap: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .contactoyredes-containter{
@@ -482,99 +511,90 @@ body::before {
   color: #7EE8FA;
   text-shadow: 0px 6px 6px #4E37FA;
   transform: scale(1.1);
-  filter: drop-shadow(0px 4px 4px #4E37FA);
-  border-radius: 6px;
+  filter: drop-shadow(0em 0.25em 0.25em #4E37FA);
+  border-radius: 0.375em;
 }
 
 .social-icons-container li{
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  gap: 1.25em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .mail{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 1.25em;
   flex-wrap: nowrap;
   flex-direction: row;
 }
 
 .form-container{
-  display: flex;
+  display: block;
   background: rgba(0, 14, 42, 0.5);
-  box-shadow: 0px 4px 4px #4E37FA;
-  backdrop-filter: blur(2px);
-  border-radius: 46px;
-  padding-top: 64px;
-  padding-bottom: 64px;
-  height: 950px;
-  width: 558px;
+  box-shadow: 0em 0.25em 0.25em #4E37FA;
+  backdrop-filter: blur(0.125em);
+  border-radius: 2.875em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  padding-left: 4em;
+  padding-right: 4em;
+  width: 30em;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-left: 140px;
+  margin-left: 8.75em;
 }
 
-.contenedorsin{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 12px 16px;
-
-  width: 200px;
-  min-width: 480px;
-  height: 20px;
-
-  background: #92cff3e0;
-  border: 1px solid #4E37FA;
-  border-radius: 25px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
+.input-container{
+  padding: 0.75em 1em;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #4E37FA;
+  border: 0.063em solid #F5F5F5;
+  border-radius: 3.625em;
+  color: white;
 }
 
 .send-btn{
   box-sizing: border-box;
 
   /* Auto layout */
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  gap: 8px;
+  padding: 0.75em 4em;
+  gap: 0.5em;
 
-  width: 510px;
-  height: 40px;
+  /* width: 31.875em; */
+  height: 2.5em;
 
   background: #4E37FA;
-  border: 1px solid #F5F5F5;
-  border-radius: 58px;
+  border: 0.063em solid #F5F5F5;
+  border-radius: 3.625em;
 
   /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 1;
-
+  margin: 0 auto;
 }
 
 .selector{
-  border-radius: 12px;
+  border-radius: 0.75em;
 
   background: #4E37FA;
-  border: 1px solid #F5F5F5;
-  border-radius: 58px;
+  border: 0.063em solid #F5F5F5;
+  border-radius: 3.625em;
   display: block;
   margin: auto;
   width: 100%;
-  padding: 12px 20px;
+  padding: 0.75em 1.25em;
 }
 
 /* CLASES DE GALAXIA MIKY*/
@@ -588,27 +608,27 @@ body::before {
 }
 
 .texto-constelacion {
-  border-top: 1px solid #7EE8FA;
-  border-right: 1px solid #7EE8FA;
-  padding-top: 12px;
-  padding-right: 16px;
+  border-top: 0.063em solid #7EE8FA;
+  border-right: 0.063em solid #7EE8FA;
+  padding-top: 0.75em;
+  padding-right: 1em;
   text-align: right;
-  border-radius: 0 24px 0 0;
+  border-radius: 0 1.5em 0 0;
   display: block;
-  height: 80px;
-  width: 300px;
+  height: 5em;
+  width: 18.75em;
 }
 
 .texto-planetas{
-  border-top: 1px solid #7EE8FA;
-  border-left: 1px solid #7EE8FA;
-  padding-top: 12px;
-  padding-left: 16px;
+  border-top: 0.063em solid #7EE8FA;
+  border-left: 0.063em solid #7EE8FA;
+  padding-top: 0.75em;
+  padding-left: 1em;
   text-align: left;
-  border-radius: 24px 0 0 0;
+  border-radius: 1.5em 0 0 0;
   display: block;
-  height: 300px;
-  width: 300px;
+  height: 18.75em;
+  width: 18.75em;
 }
 
 .galaxia-texto{
@@ -625,30 +645,30 @@ body::before {
 
 
 .separator {
-  border-top: 1px solid #7EE8FA;
-  margin-top: 64px;
-  margin-bottom: 64px;
+  border-top: 0.063em solid #7EE8FA;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 /* clases SOBRE MI*/
 
 .lineatexto-tierra{
-  border-top: 1px solid #7EE8FA;
-  border-left: 1px solid #7EE8FA;
-  padding-top: 12px;
-  padding-left: 16px;
+  border-top: 0.063em solid #7EE8FA;
+  border-left: 0.063em solid #7EE8FA;
+  padding-top: 0.75em;
+  padding-left: 1em;
   text-align: left;
   display: block;
-  height: 90px;
-  width: 245px;
-  border-radius: 24px 0 0 0;
+  height: 5.625em;
+  width: 15.313em;
+  border-radius: 1.5em 0 0 0;
 }
 
 /*PLANETAS REDES*/
 .orbitas-padre{
   position: relative;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 7.5em;
+  margin-bottom: 7.5em;
 }
 
 .orbitas-punteadas {
@@ -683,12 +703,12 @@ body::before {
 
 /*CLASES IMAGENES REDES*/
 .imagenes{
-  width: 600px;
+  width: 37.5em;
   position: absolute;
   right: 15%;
-  border-radius: 24px 24px 24px 24px;
-  border: 2px solid #7EE8FA;
-  box-shadow: 0px 4px 4px #4E37FA;
+  border-radius: 1.5em 1.5em 1.5em 1.5em;
+  border: 0.125em solid #7EE8FA;
+  box-shadow: 0em 0.25em 0.25em #4E37FA;
 }
 
 .footer{
@@ -698,17 +718,17 @@ body::before {
   justify-content: space-around;
   align-items: flex-start;
   background: rgba(0, 14, 42, 0.5);
-  box-shadow: 0px 4px 4px #4E37FA;
-  backdrop-filter: blur(2px);
+  box-shadow: 0em 0.25em 0.25em #4E37FA;
+  backdrop-filter: blur(0.125em);
   /* Note: backdrop-filter has minimal browser support */
-  border-radius: 46px;
-  padding-top: 64px;
-  padding-bottom: 64px;
-  margin: 96px 0 32px 0;
+  border-radius: 2.875em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin: 6em 0 2.25em 0;
 }
 
 .footer-descripcion {
-  width: 300px;
+  width: 18.75em;
 }
 
 .footer-list-links{
@@ -731,7 +751,7 @@ body::before {
 .footer-list-icons {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 0.75em;
 }
 
 
