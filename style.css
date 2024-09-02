@@ -33,8 +33,6 @@ body::-webkit-scrollbar-thumb {
 .container {
   max-width: 96em;
   margin: 0 auto;
-  /* padding: 0 12.5em; */
-  outline: 1px solid red;
 }
 
 /* Seteando fuente en clase para ser utilizada */
@@ -95,6 +93,10 @@ body::-webkit-scrollbar-thumb {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 
@@ -211,6 +213,13 @@ hr {
   transform: scale(1.5);
 }
 
+.w-full{
+  width: 100%;
+}
+
+.w-4{
+  width: 24em;
+}
 
 body {
     scroll-behavior: smooth;
@@ -495,6 +504,9 @@ body::before {
   padding-top: 4em;
   padding-bottom: 4em;
   height: 18.75em;
+  height: 18em;
+  width: 16em;
+  max-width: 16em;
 }
 
 .icons-container li {
@@ -511,6 +523,11 @@ body::before {
   justify-content: space-around;
   flex-direction: row;
   align-items: flex-start;
+}
+
+.contactoyredes-containter > div {
+  flex: 1;
+  margin: 0 10px; /* Ajusta el margen según sea necesario */
 }
 
 .text-light:hover{
@@ -763,13 +780,11 @@ body::before {
 
 /*TABLET*/
 
-@media screen and (max-width: 768px) {
-  
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
-    max-width: 40em;
+    width: 90%;
     margin: 0 auto;
-    padding: 0 5em;
-  } 
+  }
 
   .navbar {
     color: white;
@@ -777,7 +792,7 @@ body::before {
     padding: 1.25em 3em;
     border-radius: 3.75em;
     border-bottom: 0.25em solid #4E37FA;
-    width: 100%;
+    /* width: 100%; */
   }
 
   .navbar-list {
@@ -928,10 +943,11 @@ body::before {
   }
 
   /*RUBROS EXPLORADOS CLASES*/
-    .rubros-container {
+  .rubros-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    margin: 0 auto;
   }
 
   .diseno-cretividad{
@@ -949,8 +965,9 @@ body::before {
     border-radius: 2.875em;
     padding-top: 2em;
     padding-bottom: 2em;
-    height: 16em;
-    width: 13em;
+    height: 18em;
+    width: 16em;
+    max-width: 16em;
   }
 
   .icons-container li {
@@ -960,18 +977,13 @@ body::before {
     gap: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
- 
-  }
-
-  .orbitas-punteadas {
-    width: 200%;
-    max-width: 200%;
   }
 
   .warframeproyect {
     position: absolute;
     top: 20%;
     left: 0%;
+    width: 40%;
     animation: rotateIn;
     animation-duration: 12s;
   }
@@ -980,6 +992,7 @@ body::before {
     position: absolute;
     top: 0%;
     right: 0%;
+    width: 35%;
     animation: rotateIn;
     animation-duration: 12s;
   }
@@ -988,6 +1001,7 @@ body::before {
     position: absolute;
     top: 60%;
     left: 50%;
+    width: 30%;
     animation: rotateIn;
     animation-duration: 12s;
   }
@@ -997,7 +1011,7 @@ body::before {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 3.125em;
   }
   #contactame {
@@ -1011,6 +1025,7 @@ body::before {
   .flex-col{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 
