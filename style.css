@@ -6,6 +6,7 @@ body {
   --sb-track-color: hsla(247, 95%, 60%, 0.5);
   --sb-thumb-color: #00fffd;
   --sb-size: 4px;
+  outline: 1px solid red;
 }
 
 body::-webkit-scrollbar {
@@ -227,7 +228,7 @@ body {
     background-image: url("assets/Fondos.png");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
 /* Filtro */
 body::before {
@@ -779,35 +780,321 @@ body::before {
 
 /*RESOLUCION CELULAR (IPHONE SE)*/
 @media (min-width: 375px) and (max-width: 667px) {
-  /*.container {
-    width: 90%;
-    margin: 0 auto;
-  }*/
-
-  /* .container {
-    max-width: 31.25em;
-    margin: 0 auto;
+  body {
+    background-color: black;
+    background-size: cover;
   }
-
+  /*Menu*/
   .navbar {
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #003db61a;
-    padding: 1.25em 3em;
     border-radius: 3.75em;
     border-bottom: 0.25em solid #4E37FA;
-  } */
-  .rubros-container{
-    flex-direction: column;
+    margin-top: 1.25em;
+    padding: 1em;
   }
+
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navbar-item {
+    padding: 0.5em 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-item-center {
+    margin: 1em 0;
+  }
+
+  /*body general*/
+  .container{
+    padding: 0 1rem;
+  }
+
+  /*grilla de galaxias*/
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1em;
+    align-items: center;
+    margin-bottom: 4em;
+  }
+
+  .grid div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galaxia-via-lactea {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .galaxia-diseno-creatividad {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+    .galaxia-desarrollo-tecnologia {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .galaxia-organizacion-gestion {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  .galaxia:hover{
+    animation: unset;
+  }
+
+  .submenu-category {
+    display: inline-block;
+    /* margin-top: 1.5em; */
+    text-align: center;
+  }
+
+  /*otras cosas*/
+
 
   .contactoyredes-containter {
     flex-direction: column;
   }
 
-  /* .imagenes{
-    width: auto;
-  } */
-}
+  .title-section {
+    margin: unset;
+  }
+
+  .imagenes{
+    max-width: min-content;
+  }
+  .obteniendo-mensaje{
+    padding-inline: 0;
+  }
+
+  .warframeproyect {
+    width: 40%;
+    top: 20%;
+    left: 0%;
+    width: 40%;
+  }
+
+  .galaxygamesproyect {
+    width: 20%;
+    top: 0%;
+    right: 0%;
+    width: 35%;
+  }
+
+  .caffetoproyect {
+    width: 20%;
+    top: 60%;
+    left: 50%;
+  }
+
+  .pl-64 {
+    padding-left: 0;
+  }
+
+  .title2{
+    font-size: 1.5em;
+  }
+
+  .obteniendo-mensaje {
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    padding-inline: 2em;
+  }
+
+  /*Galaxia via lactea*/
+  .milky-contenedor {
+    position: relative;
+    width: 100%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+
+  .milky-contenedor img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .galaxia-texto {
+    position: absolute;
+    top: -50%;
+    left: 10%;
+  }
+  .texto-constelacion {
+    border-top: 0.063em solid #7EE8FA;
+    border-right: 0.063em solid #7EE8FA;
+    padding-top: 0.75em;
+    padding-right: 1em;
+    text-align: right;
+    border-radius: 0 1.5em 0 0;
+    display: block;
+    height: 3em;
+    width: 12em;
+  }
+
+  .texto-planetas {
+    border-top: 0.063em solid #7EE8FA;
+    border-left: 0.063em solid #7EE8FA;
+    padding-top: 0.75em;
+    padding-left: 1em;
+    text-align: left;
+    border-radius: 1.5em 0 0 0;
+    display: block;
+    height: 6em;
+    width: 6em;
+  }
+
+  .obteniendo-mensaje-container {
+    margin: auto;
+    text-align: center;
+    margin-top: 10em;
+    margin-bottom: 10em;
+  }
+
+  /*Sobre mi*/
+  .planeta-texto {
+    position: absolute;
+    top: -50%;
+    left: 6%;
+    }
+
+  .planeta-tierra {
+    margin-top: unset;
+    animation: earth-rotate 360s linear infinite;
+    padding-inline: 1em;
+  }
+
+  .planeta-tierra img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .planeta-container {
+    display: inline-block;
+    position: relative;
+    margin: 12em 0;
+    margin-bottom: 5em;
+  }
+
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me-description {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  @keyframes earth-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*Rubros explorados*/
+
+    .rubros-container{
+    flex-direction: column;
+  }
+  
+  .title2 {
+    font-size: 1.8em;
+  }
+
+  .text-32 {
+    font-size: 1.5em;
+  }
+
+  .text-24 {
+    font-size: 1.2em;
+  }
+
+  .about-me-container {
+    justify-items: center;
+  }
+
+  .flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h-64 {
+    height: 15em;
+  }
+
+  .icons-container {
+    background: rgba(0, 14, 42, 0.5);
+    box-shadow: 0em 0.25em 0.25em #4E37FA;
+    backdrop-filter: blur(0.125em);
+    border-radius: 2.875em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    height: 18.75em;
+    height: 18em;
+    width: 16em;
+    max-width: 16em;
+  }
+
+  /*Redes intergalacticas*/
+  .text-20 {
+    font-size: 1em;
+  }
+  .social-icons-container{
+    padding-bottom: 20%;
+  }
+
+  /*footer*/
+  .footer{
+    flex-direction: column;
+  }
+  
+  .footer-links-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-list-icons{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-descripcion {
+    width: 18.75em; 
+    padding-left: 2.5em;
+  }
+} 
+
 
 /*RESOLUCION TABLET*/
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1084,17 +1371,16 @@ body::before {
     padding-top: 1em;
     padding-bottom: 1em;
   }
- 
+  
   .title-section {
     display: block;
     margin: 2em;
   }
 
   .grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
-  margin-top: 0.02em;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 0.02em;
   }
-
 }
