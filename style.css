@@ -1,6 +1,10 @@
 /* Importando fuente desde Google */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+.mobile-navbar-menu{
+  display: flex;
+}
+
 /*Barra de navegacion*/
 body {
   --sb-track-color: hsla(247, 95%, 60%, 0.5);
@@ -240,6 +244,11 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
+    outline: 1px solid green;
+}
+
+body::after{
+  outline: 1px solid green;
 }
 
 /* cada section ocupa el alto maximo tamaño de la pantalla */
@@ -694,6 +703,10 @@ body::before {
   max-width: 100%;
 }
 
+.orbitascel{
+  display: none;
+}
+
 .warframeproyect{
   position: absolute;
   top: 0;
@@ -780,10 +793,6 @@ body::before {
 
 /*RESOLUCION CELULAR (IPHONE SE)*/
 @media (min-width: 375px) and (max-width: 667px) {
-  body {
-    background-color: black;
-    background-size: cover;
-  }
   /*Menu*/
   .navbar {
     display: flex;
@@ -815,13 +824,10 @@ body::before {
     margin: 1em 0;
   }
 
-  /*body general*/
-  .container{
-    padding: 0 1rem;
-  }
+
 
   /*grilla de galaxias*/
-    .grid {
+  .grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-template-rows: repeat(2, 1fr);
@@ -858,6 +864,9 @@ body::before {
   .galaxia:hover{
     animation: unset;
   }
+  .galaxia:not(:hover){
+    animation: unset;
+  }
 
   .submenu-category {
     display: inline-block;
@@ -865,59 +874,42 @@ body::before {
     text-align: center;
   }
 
-  /*otras cosas*/
-
-
-  .contactoyredes-containter {
-    flex-direction: column;
-  }
-
+  /*Titulos de bienvenida a la pagina*/
   .title-section {
     margin: unset;
+    margin-bottom: 5%;
   }
 
-  .imagenes{
-    max-width: min-content;
-  }
-  .obteniendo-mensaje{
-    padding-inline: 0;
-  }
-
-  .warframeproyect {
-    width: 40%;
-    top: 20%;
-    left: 0%;
-    width: 40%;
-  }
-
-  .galaxygamesproyect {
-    width: 20%;
-    top: 0%;
-    right: 0%;
-    width: 35%;
-  }
-
-  .caffetoproyect {
-    width: 20%;
-    top: 60%;
-    left: 50%;
-  }
-
-  .pl-64 {
-    padding-left: 0;
+  .title {
+    color: white;
+    font-size: 2em;
+    font-weight: lighter;
+    text-align: center;
+    display: block;
   }
 
   .title2{
     font-size: 1.5em;
   }
 
-  .obteniendo-mensaje {
-    font-family: 'Josefin Sans', sans-serif;
-    font-style: italic;
+  /* boton comenzar viaje*/
+  .btn-viaje{
+    padding-left: .9em;
+    padding-right: .9em;
+  }
+  
+  /* Obteniendo mensajes*/
+  .obteniendo-mensaje{
+    font-size: 0.9em;
+    padding-inline: 0;
+  }
+
+  .obteniendo-mensaje-container {
+    margin: auto;
     text-align: center;
-    color: white;
-    font-size: 1em;
-    padding-inline: 2em;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    padding-inline: 1em;
   }
 
   /*Galaxia via lactea*/
@@ -936,11 +928,24 @@ body::before {
     margin: 0 auto;
   }
 
-  .galaxia-texto {
+  /* .galaxia-texto {
     position: absolute;
     top: -50%;
     left: 10%;
+  } */
+  .galaxia-texto {
+    top: -50%;
+    left: 10%;
+    font-size: .7em;
   }
+
+  .sistema-texto {
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    font-size: .7em;
+  }
+
   .texto-constelacion {
     border-top: 0.063em solid #7EE8FA;
     border-right: 0.063em solid #7EE8FA;
@@ -957,22 +962,32 @@ body::before {
     border-top: 0.063em solid #7EE8FA;
     border-left: 0.063em solid #7EE8FA;
     padding-top: 0.75em;
-    padding-left: 1em;
+    padding-left: 1.2em;
     text-align: left;
     border-radius: 1.5em 0 0 0;
     display: block;
-    height: 6em;
+    height: 9em;
     width: 6em;
   }
 
-  .obteniendo-mensaje-container {
-    margin: auto;
-    text-align: center;
-    margin-top: 10em;
-    margin-bottom: 10em;
+  /*Sobre mi*/
+
+  .about-me-title-container hr {
+    flex-grow: 1;
+    margin-left: 1em;
+    margin-right: 1.5em;
+    border: none;
+    border-bottom: 0.063em solid cyan;
   }
 
-  /*Sobre mi*/
+  .sobremititulo{
+    padding-left: 0.8em;
+  }
+
+  .pl-64 {
+    padding-left: 0;
+  }
+
   .planeta-texto {
     position: absolute;
     top: -50%;
@@ -981,7 +996,7 @@ body::before {
 
   .planeta-tierra {
     margin-top: unset;
-    animation: earth-rotate 360s linear infinite;
+    /* animation: earth-rotate 360s linear infinite; */
     padding-inline: 1em;
   }
 
@@ -1022,10 +1037,20 @@ body::before {
 
   /*Rubros explorados*/
 
-    .rubros-container{
+  .rubros-container{
     flex-direction: column;
   }
-  
+
+  .w-full {
+    width: 100%;
+  }
+  .rubrosexptitulo{
+    padding-left: 0.8em;
+  }
+  .titulosrubros{
+    padding-left: 1.5em;
+  }
+
   .title2 {
     font-size: 1.8em;
   }
@@ -1036,6 +1061,10 @@ body::before {
 
   .text-24 {
     font-size: 1.2em;
+  }
+
+  .text-16 {
+    font-size: .9em;
   }
 
   .about-me-container {
@@ -1066,6 +1095,47 @@ body::before {
     max-width: 16em;
   }
 
+  .orbitas-punteadas {
+    display: none;
+  }
+
+  .orbitascel{
+    display: block;
+    width: 100%;
+  }
+
+  .warframeproyect {
+    width: 40%;
+    top: 20%;
+    left: 5%;
+  }
+
+  .galaxygamesproyect {
+    width: 20%;
+    top: 0%;
+    right: 5%;
+  }
+
+  .caffetoproyect {
+    width: 20%;
+    top: 60%;
+    left: 60%;
+  }
+
+  /*Registros estelares*/
+  .separator {
+    border-top: 0.063em solid #7EE8FA;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  #blog{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   /*Redes intergalacticas*/
   .text-20 {
     font-size: 1em;
@@ -1073,6 +1143,20 @@ body::before {
   .social-icons-container{
     padding-bottom: 20%;
   }
+    .imagenes{
+    max-width: min-content;
+  }
+
+  .pl-64{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .contactoyredes-containter {
+    flex-direction: column;
+  }
+
+
 
   /*footer*/
   .footer{
@@ -1296,6 +1380,10 @@ body::before {
     margin-bottom: 1em;
   }
 
+  .orbitascel{
+    display: none;
+  }
+
   .warframeproyect {
     position: absolute;
     top: 20%;
@@ -1382,5 +1470,9 @@ body::before {
     grid-template-columns: repeat(4, minmax(300px, 1fr));
     grid-template-rows: repeat(3, 1fr);
     margin-top: 0.02em;
+  }
+
+    .orbitascel{
+    display: none;
   }
 }
