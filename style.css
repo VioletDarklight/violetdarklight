@@ -1,6 +1,10 @@
 /* Importando fuente desde Google */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*Barra de navegacion*/
 body {
   --sb-track-color: hsla(247, 95%, 60%, 0.5);
