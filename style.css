@@ -10,7 +10,6 @@ body {
   --sb-track-color: hsla(247, 95%, 60%, 0.5);
   --sb-thumb-color: #00fffd;
   --sb-size: 4px;
-  outline: 1px solid red;
 }
 
 body::-webkit-scrollbar {
@@ -792,7 +791,7 @@ body::before {
   gap: 0.75em;
 }
 
-/*RESOLUCION CELULAR (IPHONE SE)*/
+/*RESOLUCION CELULAR (|)*/
 @media (min-width: 375px) and (max-width: 667px) {
   /*Menu*/
   .navbar {
@@ -1201,7 +1200,16 @@ body::before {
     flex-direction: column;
   }
 
+  .imagenes{
+    width: 100%;
+    max-width: 100%;
+  }
 
+  .form-container{
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+  }
 
   /*footer*/
   .footer{
@@ -1401,7 +1409,7 @@ body::before {
   }
 
   .h-64 {
-    height: 12.5em;
+    height: auto;
   }
 
   .icons-container {
@@ -1494,7 +1502,7 @@ body::before {
     justify-content: center;
     align-items: center;
   }
- .navbar {
+  .navbar {
     display: block;
     color: white;
     background-color: #003db61a;
@@ -1509,15 +1517,23 @@ body::before {
     display: block;
     margin: 2em;
   }
-
   .grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
-    grid-template-rows: repeat(3, 1fr);
-    margin-top: 0.02em;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 1em;
+    align-items: center;
+    margin-bottom: 4em;
   }
 
-    .orbitascel{
+  .grid div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .orbitascel{
     display: none;
   }
 }
